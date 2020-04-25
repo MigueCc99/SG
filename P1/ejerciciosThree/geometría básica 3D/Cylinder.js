@@ -10,6 +10,7 @@ class Cylinder extends THREE.Object3D {
    this.cylinder = new THREE.Mesh(cylinderGeom, cylinderMat);
    this.add(this.cylinder);
    this.cylinder.position.y = 7.0;
+
  }
 
  createGUI (gui,titleGui) {

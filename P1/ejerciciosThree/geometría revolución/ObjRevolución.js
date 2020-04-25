@@ -1,10 +1,28 @@
 // Perfil de la figura (points : variable global)
+  /*
   var points = [];
   points.push(new THREE.Vector3(0,0,0));
   for ( var i = 0; i < 10; i ++ )
     points.push(new THREE.Vector3(10,i,0));
   points.push(new THREE.Vector3(10,10,0));
   points.push(new THREE.Vector3(0,10,0));
+  */
+ //var points = [ new THREE.Vector2 (0,0), (5,0), (5,2.5), (5,5), (0,5) ] ;
+
+ var points = [];
+ points.push(new THREE.Vector2(0,-1,4));
+ points.push(new THREE.Vector2(1.0,-1.4));
+ points.push(new THREE.Vector2(1.0, -1.1));
+ points.push(new THREE.Vector2(0.5, -0.7));
+ points.push(new THREE.Vector2(0.4, -0.4));
+ points.push(new THREE.Vector2(0.4, 0.5));
+ points.push(new THREE.Vector2(0.5, 0.6));
+ points.push(new THREE.Vector2(0.3, 0.6)); 
+ points.push(new THREE.Vector2(0.5, 0.8));
+ points.push(new THREE.Vector2(0.55, 1.0)); 
+ points.push(new THREE.Vector2(0.5, 1.2)); 
+ points.push(new THREE.Vector2(0.3, 1.4)); 
+ points.push(new THREE.Vector2(0, 1.4)); 
 
 class ObjRevolución extends THREE.Object3D {
   constructor(gui,titleGui) {

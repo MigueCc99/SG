@@ -27,29 +27,9 @@ class MyScene extends THREE.Scene {
     // Por último creamos el modelo.
     // El modelo puede incluir su parte de la interfaz gráfica de usuario. Le pasamos la referencia a
     // la gui y el texto bajo el que se agruparán los controles de la interfaz que añada el modelo.
-/*
-    this.model = new Revolución(this.gui, "Controles Objeto Revolución:");
-    this.add (this.model);
-*/
-/*
-    var points = [];
-    for ( var i = 0; i < 10; i ++ ) {
-      points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
-    }
 
-    var points = [];
-    points.push(new THREE.Vector3(0,0,0));
-    for ( var i = 0; i < 10; i ++ )
-      points.push(new THREE.Vector3(10,i,0));
-    points.push(new THREE.Vector3(10,10,0));
-    points.push(new THREE.Vector3(0,10,0));
-    var geometry = new THREE.LatheGeometry( points );
-    var material = new THREE.MeshNormalMaterial();
-    this.lathe = new THREE.Mesh( geometry, material );
-    this.add(this.lathe);
-*/
-    this.model = new ObjRevolución(this.gui,"Controles del ObjRevolución:");
-    this.add (this.model);
+    this.peon = new ObjRevolución(this.gui,"Controles del ObjRevolución:");
+    this.add (this.peon);
 
   }
 

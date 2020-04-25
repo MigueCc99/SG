@@ -27,35 +27,12 @@ class MyScene extends THREE.Scene {
     // Por último creamos el modelo.
     // El modelo puede incluir su parte de la interfaz gráfica de usuario. Le pasamos la referencia a
     // la gui y el texto bajo el que se agruparán los controles de la interfaz que añada el modelo.
-    var heartShape = new THREE.Shape();
 
-    heartShape.moveTo( 25, 25 );
-    heartShape.bezierCurveTo( 25, 25, 20, 0, 0, 0 );
-    heartShape.bezierCurveTo( 30, 0, 30, 35,30,35 );
-    heartShape.bezierCurveTo( 30, 55, 10, 77, 25, 95 );
-    heartShape.bezierCurveTo( 60, 77, 80, 55, 80, 35 );
-    heartShape.bezierCurveTo( 80, 35, 80, 0, 50, 0 );
-    heartShape.bezierCurveTo( 35, 0, 25, 25, 25, 25 );
+    this.triangle = new TriangleShape();
+    this.add (this.triangle);
 
-    var extrudeSettings = { amount: 8, bevelEnabled: true, bevelSegments: 2, steps: 2, bevelSize: 1, bevelThickness: 1 };
-
-    var geometry = new THREE.ExtrudeBufferGeometry( heartShape, extrudeSettings );
-    var material = new THREE.MeshNormalMaterial();
-    var mesh = new THREE.Mesh( geometry, material );
-
-    var circleRadius = 40;
-    var circleShape = new THREE.Shape()
-      circleShape.moveTo( 0, circleRadius )
-      circleShape.quadraticCurveTo( circleRadius, circleRadius, circleRadius, 0 )
-      circleShape.quadraticCurveTo( circleRadius, - circleRadius, 0, - circleRadius )
-      circleShape.quadraticCurveTo( - circleRadius, - circleRadius, - circleRadius, 0 )
-      circleShape.quadraticCurveTo( - circleRadius, circleRadius, 0, circleRadius );
-
-      var geometry2 = new THREE.ExtrudeBufferGeometry( circleShape, extrudeSettings );
-
-      var mesh2 = new THREE.Mesh( geometry2, material );
-    this.add(mesh2);
-
+    this.heart = new HeartShape();
+    this.add(this.heart);
   }
 
   createCamera () {
@@ -192,7 +169,7 @@ class MyScene extends THREE.Scene {
     this.cameraControl.update();
 
     // Para la actualización del resto de nodos se le pide a los objetos que correspondan
-    this.model.update();
+    //this.model.update();
   }
 }
 
