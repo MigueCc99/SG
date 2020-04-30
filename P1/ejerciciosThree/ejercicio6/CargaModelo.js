@@ -1,6 +1,8 @@
 class CargaModelo extends THREE.Object3D {
-    constructor() {
+    constructor(gui, titleGui) {
       super();
+
+      this.createGUI(gui,titleGui);
 
       var that = this;
       var materialLoader = new THREE.MTLLoader();
@@ -14,11 +16,20 @@ class CargaModelo extends THREE.Object3D {
                     that.add (modelo);
                 }, null, null);
         });
-
     }
    
+    createGUI (gui,titleGui) {
+        this.guiControls = new function (){
+          this.rotate = false;
+        }
+        var folder = gui.addFolder (titleGui);
+    
+        folder.add (this.guiControls, 'rotate').name ('Controlar Rotación : ').listen();
+      }
+    
     update (){
-
+        if(this.guiControls.rotate == true)
+            this.rotation.y += 0.01;
     }
    
    
