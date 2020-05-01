@@ -89,6 +89,7 @@ update (){
     this.rotation.z = this.guiControls.rotation1;
     //this.extensorP1.scale.set(1,this.guiControls.longitud1,1);
     this.p2.rotation.z = this.guiControls.rotation2;
+    //this.extensor.scale.set(0.5,this.guiControls.longitud1,0.25);
 } 
    
 }
