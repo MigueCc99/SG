@@ -31,8 +31,12 @@ class MyScene extends THREE.Scene {
     this.triangle = new TriangleShape();
     this.add (this.triangle);
 
+    //this.triangle.position.set(-10,0,0);
+
     this.heart = new HeartShape();
     this.add(this.heart);
+  
+    this.heart.position.set(-10,0,0);
   }
 
   createCamera () {

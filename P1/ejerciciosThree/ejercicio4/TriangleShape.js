@@ -2,11 +2,15 @@ class TriangleShape extends THREE.Object3D {
   constructor(){
     super();
     var shape = new THREE.Shape ( ) ;
-    shape.moveTo(80,20);
-    shape.lineTo(40,80);
-    shape.lineTo(120,80);
-    shape.lineTo(80,20);
-
+    //shape.moveTo(80,20);
+    //shape.lineTo(40,80);
+    //shape.lineTo(120,80);
+    //shape.lineTo(80,20);
+    shape.moveTo(10,10);
+    shape.lineTo(20,40);
+    shape.lineTo(60,40);
+    shape.lineTo(10,10);
+    
     var extrudeSettings = {
       steps: 2,
       depth: 16,
@@ -21,6 +25,7 @@ class TriangleShape extends THREE.Object3D {
     var material = new THREE.MeshNormalMaterial();
 
     var mesh = new THREE.Mesh(geometry, material);
+    mesh.position.x = -10;
     this.add(mesh);
   }
 
